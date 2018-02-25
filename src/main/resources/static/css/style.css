@@ -1,0 +1,29 @@
+#header {
+	height: 170px;
+	font-style: italic;
+	display: inline-block;
+	color: white;
+	background-image: url("../images/lappool.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	margin-left: 75px;
+	margin-top: 40px;
+	font-size: 45pt;
+	vertical-align: center;
+}
+
+.col, .col-8 {
+	background-color: darkblue;
+	height: 500px;
+	margin-left: 20px;
+	margin-top: 20px; 
+}
+
+.row {
+	margin-right: 5px;
+}
+
+
