@@ -8,16 +8,56 @@
 	background-size: cover;
 }
 
-h1 {
+#header img {
+	width: 60px;
+	height: auto;
+}
+
+#header a {
+	color: white;
+}
+
+#header h1 {
 	margin-left: 75px;
 	margin-top: 40px;
 	font-size: 45pt;
 	vertical-align: center;
 }
 
-.col, .col-8 {
-	background-color: darkblue;
-	height: 500px;
+#header h5 {
+	margin-left: 120px;
+	margin-top: -5px;
+	vertical-align: center;
+	font-style: normal;
+}
+
+nav {
+	height: 60px;
+}
+
+#curTime {
+	color: white;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+#curTime img {
+	margin-top: -5px;
+}
+
+#seasonal {
+	color: red;
+}
+
+.col-8 {
+	height: auto;
+	margin-left: 20px;
+	margin-top: 20px; 
+}
+
+.col {
+	color: white;
+	height: auto;
 	margin-left: 20px;
 	margin-top: 20px; 
 }
@@ -25,5 +65,45 @@ h1 {
 .row {
 	margin-right: 5px;
 }
+
+#poolList {
+	margin: 10px 20px 10px 20px;
+}
+
+#poolList a {
+	color: white;
+}
+
+#poolList h1 {
+	color: rgb(0, 123, 255);
+}
+
+table, th, tr, td {
+	border: 1px solid black;
+}
+
+#poolSchedule {
+	margin: 10px 20px 10px 20px;
+}
+
+#poolSchedule h1 {
+	color: rgb(0, 123, 255);
+}
+
+#poolSchedule a {
+	color: white;
+	font-style: bold;
+}
+
+.form-row p {
+	margin-left: 15px;
+}
+
+.table table-hover table-dark bg-primary {
+	background-color: rgb(0, 123, 255);
+	color: white;
+}
+
+
 
 
