@@ -11,6 +11,5 @@ import com.sararoepe.pool.models.User;
 public interface UserRepository extends CrudRepository<User, Long>{
 	List<User> findAll();
 	User findByEmail(String email);
-	User findByAlias(String alias);
 	User findOne(Long id);
 }

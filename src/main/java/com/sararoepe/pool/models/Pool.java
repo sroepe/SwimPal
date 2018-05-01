@@ -50,6 +50,10 @@ public class Pool {
 	
 	private Date closedDate;
 	
+	private boolean seasonal;
+	
+	private String amenities;
+	
 	@Column(updatable=false)
     @DateTimeFormat(pattern="MM/dd/yyyy HH:mm:ss")
     private Date createdAt;
@@ -179,6 +183,22 @@ public class Pool {
 
 	public void setClosedDate(Date closedDate) {
 		this.closedDate = closedDate;
+	}
+
+	public boolean isSeasonal() {
+		return seasonal;
+	}
+
+	public void setSeasonal(boolean seasonal) {
+		this.seasonal = seasonal;
+	}
+
+	public String getAmenities() {
+		return amenities;
+	}
+
+	public void setAmenities(String amenities) {
+		this.amenities = amenities;
 	}
 
 	public Date getCreatedAt() {

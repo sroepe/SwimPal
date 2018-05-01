@@ -34,10 +34,6 @@ public class User {
     @Pattern(regexp="^[a-zA-Z'-]+$", message="Please capitalize the first letter of your name. Alpha, hyphen, dash characters only.")
     private String lastName;
     
-    @Size(min=6, message="Your alias must be 6 or more alphanumeric characters. No spaces or special characters")
-    @Pattern(regexp="^[a-zA-Z0-9]+$", message="Your alias must be 6 or more alphanumeric characters. No spaces or special characters")
-    private String alias;
-    
     @Pattern(regexp="^(.+)@(.+)$", message="You must enter a valid email.  Example: abc@abc.com")
     private String email;
        
@@ -101,14 +97,6 @@ public class User {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getAlias() {
-		return alias;
-	}
-
-	public void setAlias(String alias) {
-		this.alias = alias;
 	}
 
 	public String getEmail() {

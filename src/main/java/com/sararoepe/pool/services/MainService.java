@@ -2,7 +2,7 @@ package com.sararoepe.pool.services;
 
 import java.util.List;
 
-import org.springframework.security.crypto.bcrypt.*;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -24,7 +24,7 @@ public class MainService {
 		this.userRepository = userRepository;
 	}
 	
-	public Object addUser(User user, String confirmPassword, RedirectAttributes redirectAttributes) {
+	public Object addUser(User user, String confirmPassword, RedirectAttributes redirectAttributes) {  //checks for existing user in db, and adds if not; otherwise message appears that user already exists//
 		boolean userExists = false;
 		if(userRepository.findByEmail(user.getEmail()) instanceof User) {
 			userExists = true;
@@ -40,10 +40,10 @@ public class MainService {
 		}
 	}
 	
-	public Object loginUser(String email, String password) {
+	public Object loginUser(String email, String password) { //checks db to see if user exists and info is valid; displays errors if not//
 		User user = userRepository.findByEmail(email);
 		if(user == null) {
-			return "Email does not exist";
+			return "Invalid login information.  Please try again.";
 			
 		} else {
 			if (BCrypt.checkpw(password, user.getPassword())) {
@@ -63,11 +63,7 @@ public class MainService {
 	public User findByEmail(String email) {
 		return userRepository.findByEmail(email);
 	}
-	
-	public User findByAlias(String alias) {
-		return userRepository.findByAlias(alias);
-	}
-	
+		
 	public List<User> allUsers(){
 		return userRepository.findAll();
 	}
@@ -80,6 +76,14 @@ public class MainService {
 		return poolRepository.findOne(id);
 	}
 	
+	public Schedule findScheduleById(Long id) {
+		return scheduleRepository.findOne(id);
+	}
+	
+	public void updateSchedules (List<User> schedulesUsers) { //saves changes to a user's mySwims to db//
+		userRepository.save(schedulesUsers);
+	}
+	
 	public List<Schedule> allSchedules(){
 		return (List<Schedule>) scheduleRepository.findAll();
 	}
@@ -87,9 +91,9 @@ public class MainService {
 	public List<Schedule> allSchedulesByStartTime(){
 		return (List<Schedule>) scheduleRepository.allSchedulesByStartTime();
 	}
-	 
+	
 	public List<Schedule> allSchedulesByCurrentDayAndTime(){
 		return (List<Schedule>) scheduleRepository.findSchedulesByDayAndTime();
 	}
-	
-}
+
+} 

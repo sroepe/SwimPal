@@ -3,6 +3,7 @@ package com.sararoepe.pool.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -25,7 +26,9 @@ public class Schedule {
 	@GeneratedValue
 	private Long id;
 	
-	private String swimType; 
+	private String type; 
+	
+	private String swim; 
 	
 	private String poolType;
 	
@@ -75,7 +78,7 @@ public class Schedule {
     	this.updatedAt = new Date();
     }	
     
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name ="pool_id")
 	private Pool pool;
     
@@ -95,12 +98,20 @@ public class Schedule {
 		this.id = id;
 	}
 
-	public String getSwimType() {
-		return swimType;
+	public String getType() {
+		return type;
 	}
 
-	public void setSwimType(String swimType) {
-		this.swimType = swimType;
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getSwim() {
+		return swim;
+	}
+
+	public void setSwim(String swim) {
+		this.swim = swim;
 	}
 
 	public String getPoolType() {
