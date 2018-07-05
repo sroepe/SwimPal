@@ -1,0 +1,267 @@
+@media only screen and (max-width: 510px){
+	#header h1.sm {
+		margin-left: 0px;
+		font-size: 35pt;
+		padding: 10px 10px 0px 0px;
+		color: white;
+	}
+	#header img.sm {
+		width: 30px;
+	}
+	.med, .lg, .medLg {
+		display: none;
+	}
+	.container-fluid {
+		padding-right: 0px;
+		padding-left: 15px;
+	}
+	.sm {
+		height: auto;
+		width: auto;
+		text-align: center;
+	}
+	#legend.sm, #legend.row.medLog {
+		margin: 5px 5px 0px 5px;
+		padding: 10px;
+		background-color: rgb(0, 123, 255);
+		border-radius: 0px;
+	}
+	#map {
+		height: 400px;
+		margin: 5px 0px 0px 5px;
+	}
+	#loginReg {
+		margin: 5px 0px 5px 5px;
+	}
+	nav.navbar.smLog {
+		height: auto;
+		padding-bottom: 10px;
+	}
+	#mapOnly.medLog {
+		margin: 5px;
+	}
+}
+
+@media only screen and (min-width: 511px) and (max-width: 969px){
+	.sm, .lg {
+		display: none;
+	}
+	nav.navbar.medLog {
+		height: auto;
+		padding-bottom: 10px;
+	}
+	#panels.container-fluid {
+		padding: 10px 10px 0px 10px;
+	}
+	#legend.row.med, #legend.row.medLog {
+		display: inline-block;
+		margin: 5px 0px 0px 5px;
+		background-color: rgb(0, 123, 255);
+		border-radius: 0px;
+		border: 0px;
+		height: auto;
+		width: 98.5%;
+		text-align: center;
+		vertical-align: middle;
+		padding: 10px;
+	}
+	.row {
+		margin-right: 4px;
+	} 
+	#loginReg {
+		padding: 0px 20px 0px 10px;
+	}
+	#mapOnly.medLog {
+		margin: 5px;
+	}
+}
+
+@media only screen and (min-width: 970px){
+	.sm, .med, #legend.row.medLog {
+		display: none;
+	}
+	nav.navbar.medLog {
+		height: auto;
+		padding-bottom: 10px;
+	}
+}
+
+#header {
+	height: 170px;
+	font-style: italic;
+	display: inline-block;
+	color: white;
+	background-image: url("../images/lappool.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#header img {
+	width: 60px;
+	height: auto;
+}
+#header button {
+	background-color: Transparent;
+	color: white;
+	border: none;
+	outline: none;
+}
+#header h1 {
+	margin-left: 75px;
+	margin-top: 40px;
+	font-size: 45pt;
+	vertical-align: center;
+	font-style: italic;
+}
+#header h5 {
+	margin-left: 120px;
+	margin-top: -5px;
+	vertical-align: center;
+	font-style: normal;
+}
+#curTime {
+	margin-top: 15px;
+	color: white;
+	font-weight: bold;
+	font-style: none;
+}
+#curTime img {
+	margin-top: -5px;
+}
+#seasonal {
+	color: red;
+	font-weight: bold;
+}
+.navbar {
+	height: 65px;
+	padding: 0px 10px;
+}
+#footer.bg-primary {
+	height: 65px;
+	text-align: center;
+	verical-align: middle;
+}
+#footer a {
+	color: white;
+	margin-right: 0px;
+}
+#footer p {
+	color: white;
+	text-align: center;
+	font-size: 8pt;
+	margin-bottom: 10px;
+}
+.container-fluid {
+	height: auto;
+}
+.col-8 {
+	height: auto;
+	margin: 20px 0px 20px 20px;
+}
+.col {
+	color: white;
+	height: auto;
+	margin: 20px 0px 20px 20px; 
+}
+.row {
+	margin-right: 5px;
+}
+#mapOnly {
+	height: 500px;
+	width: auto; 
+	margin: 20px;
+}
+#legend {
+	border: 1px solid white;
+	color: white;
+	padding: 0px 5px 0px 5px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+#legend img {
+	height: 30px;
+	width: auto;
+}
+.logged {
+	display: block;
+}
+.logged p {
+	margin-top: -5px;
+	margin-bottom: 0px;
+	padding: 0px;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 20pt;
+}
+.logged a {
+	color: white;
+	font-size: 9pt;
+	margin: 0px 0px 10px 95px;
+	font-weight: none;
+	font-style: normal;
+}
+#poolList a {
+	color: white;
+}
+#poolList h1 {
+	color: rgb(0, 123, 255);
+	padding-top: 5px;
+}
+#poolSchedule p {
+	padding-top: 5px;
+	margin-bottom: 0px;
+}
+#poolDetails h1, h6 {
+	margin: 0px auto;
+}
+#poolDetails h1 {
+	padding-top: 5px;
+} 
+#poolInfo {
+	margin: 0px auto;
+	padding: 15px 0px 15px 0px;
+	text-align: right;
+}
+table, th, tr, td {
+	border: 1px solid black;
+}
+#poolSchedule h1, h6 {
+	color: rgb(0, 123, 255);
+}
+#poolSchedule a {
+	color: rgb(0, 123, 255);
+}
+.form-row p {
+	margin-left: 15px;
+}
+#loginReg h6 {
+	color: white;
+	font-size: 8pt;
+	margin: 0px auto;
+}
+.table table-hover table-dark bg-primary {
+	background-color: rgb(0, 123, 255);
+	color: white;
+}
+#schedTable {
+	margin-bottom: 10px;
+}
+#schedTable td {
+	margin-bottom: 10px;
+	background-color: lightblue;
+	padding: 5px;
+	font-weight: bold;
+}
+#about h1 {
+	padding-top: 5px;
+	color: rgb(0, 123, 255);
+}
+#aboutText {
+	color: rgb(0, 123, 255);
+}
+#aboutText h4 {
+	text-decoration: underline;
+}
+
+
+
+
